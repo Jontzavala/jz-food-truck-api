@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Category.create(name: "Breakfast")
-Category.create(name: "Lunch")
-Category.create(name: "Dinner")
+Category.create({name: "Breakfast"})
+Category.create({name: "Lunch"})
+Category.create({name: "Dinner"})
 
 Item.create({name: "Chorizo and Egg Plate", price: 7, description: "Chorizo and eggs served with refried beans, potatoes and tortillas", category_id: 1})
 
 Item.create({name: "Bacon Cheese Burger", price: 8, description: "1/4 pound burger with bacon and cheese served with fries", category_id: 2})
+
+Item.create({name: "Steak and Potatoes", price: 15, description: "Ribeye steak with potatoes and asparagus", category_id: 3})

@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show update destroy ]
+  before_action :set_categories
 
   # GET /items
   def index
@@ -47,5 +48,9 @@ class ItemsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def item_params
       params.require(:item).permit(:name, :price, :description, :category_id)
+    end
+
+    def set_categories
+      @categories = Category.all
     end
 end
